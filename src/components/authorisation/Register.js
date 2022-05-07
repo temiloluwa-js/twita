@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 
 const Register = () => {
+  const [pending, setPending] = useState(false);
   const [person, setPerson] = useState({
     firstName: "",
     lastName: "",
@@ -13,11 +14,9 @@ const Register = () => {
     profilePicUrl: "",
   });
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const [pending, setPending] = useState(true);
-
     localStorage.setItem("person", person);
     axios
       .post("http://localhost:7000/persons", person)
@@ -26,7 +25,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="loginpage">
       <form className="register" onSubmit={handleSubmit}>
         <div>
           <p>Names</p>
@@ -85,8 +84,7 @@ const Register = () => {
             />
           </div>
         </div>
-        <button type="submit">Submit</button>
-        {pending && <button>Loading...</button>}
+        {pending ? <button>Loading...</button> : <button>Submit</button>}
       </form>
     </div>
   );

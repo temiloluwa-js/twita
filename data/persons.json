@@ -1,5 +1,15 @@
 {
-    "persons": [
-        
-    ]
+  "persons": [
+    {
+      "firstName": "adeleye",
+      "lastName": "temiloluwa",
+      "age": "18",
+      "gender": "",
+      "username": "temikun",
+      "password": "ade",
+      "confirmPassword": "ade",
+      "profilePicUrl": "",
+      "id": 1
+    }
+  ]
 }
