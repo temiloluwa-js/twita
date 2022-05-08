@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import '../styles/Register.css'
+
 
 const Register = () => {
+  const history = useNavigate();
   const [pending, setPending] = useState(false);
   const [person, setPerson] = useState({
     firstName: "",
@@ -17,11 +21,14 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("person", person);
+    const personInStorage = localStorage.getItem("personInStorage")
+    personInStorage ?   localStorage.setItem("personInStorage", JSON.stringify(person)):  localStorage.setItem("personInStorage", JSON.stringify(person));
     axios
       .post("http://localhost:7000/persons", person)
       .then(setPending(false))
+      .then(history('/'))
       .catch((err) => console.log(err));
+
   };
 
   return (
@@ -29,7 +36,7 @@ const Register = () => {
       <form className="register" onSubmit={handleSubmit}>
         <div>
           <p>Names</p>
-          <div>
+          <div className="names">
             <label htmlFor="firstName">First Name</label>
             <input
               type="text"

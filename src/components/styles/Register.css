@@ -1,0 +1,19 @@
+.loginpage{
+    display: grid;
+    place-content: center;
+}
+
+form{
+    padding-block: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.names{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
