@@ -10,6 +10,16 @@
       "confirmPassword": "kyo",
       "profilePicUrl": "https://avatars.dicebear.com/api/personas/john.svg?background=%23c0c0c0",
       "id": 1
+    },
+    {
+      "firstName": "Adeosun",
+      "lastName": "Ishola",
+      "age": "7",
+      "username": "alard",
+      "password": "alard",
+      "confirmPassword": "alard",
+      "profilePicUrl": "",
+      "id": 2
     }
   ]
 }

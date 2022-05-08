@@ -78,7 +78,7 @@ const Register = () => {
               }
             />
           </div>
-          {pending ? <button>Loading...</button> : <button>Submit</button>}
+          {pending ? <button>Loading...</button> : <button>Register</button>}
         </form>
       </div>
     </div>

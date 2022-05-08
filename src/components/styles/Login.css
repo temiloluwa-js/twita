@@ -13,7 +13,14 @@
   }
   
   .form-div {
+      display: grid;
+      place-items: center;
     width: 30%;
+  }
+
+  form p{
+      text-align: center;
+      margin-block-start: 3rem;
   }
   
   form {
@@ -38,7 +45,9 @@
   
   form h1 {
     text-align: center;
+    margin-block-end: 8rem;
     font-size: clamp(2rem, 3vw, 2in);
+    
   }
   
   form input,

@@ -38,17 +38,21 @@ const Login = () => {
 
   return (
     <div className="loginpage">
-      <img src={image} className='img'/>
+      <img src={image} className="img" />
       <div className="form-div">
+
         <form onSubmit={handleSubmit}>
-          <label htmlFor="">Username</label>
-          <input type="text" onChange={(e) => setUsername(e.target.value)} />
-          <label htmlFor="">Password</label>
-          <input type="text" onChange={(e) => setPassword(e.target.value)} />
-          <button type="submit">Submit</button>
-          <p>
-            Already have an account? <Link to="/register">Register</Link>
-          </p>
+        <h1>twita.</h1>
+          <div>
+            <label htmlFor="">Username</label>
+            <input type="text" onChange={(e) => setUsername(e.target.value)} />
+            <label htmlFor="">Password</label>
+            <input type="text" onChange={(e) => setPassword(e.target.value)} />
+            <button type="submit">Log In</button>
+            <p>
+              Do not have an account? <Link to="/register">Register</Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>
