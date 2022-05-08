@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../styles/ProfilePic.css";
 const ProfilePic = () => {
-  const personInStorage = localStorage.getItem(JSON.parse("personInStorage"));
+  const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
   const [imageType, setImageType] = useState("male");
   const [backgroundColor, setBackgroundColor] = useState("000000");
   const [profilePic, setProfilePic] = useState(
@@ -14,11 +14,10 @@ const ProfilePic = () => {
     );
   }, [imageType, backgroundColor]);
 
-  useEffect(() => {
-    console.log(personInStorage.firstName)
-    // axios.put(`http://localhost:7000/persons/${personInStorage.id}`, {
-    //   profileUrl: `${profilePic}`
-    }, [imageType, backgroundColor])
+useEffect(() => {
+  axios.put(`http://localhost:7000/persons?username=${personInStorage.username}&firstName`, {profileUrl: profilePic})
+  .then(console.log('Done'))
+})
     
   return (
     <div>
@@ -43,6 +42,8 @@ const ProfilePic = () => {
         type="color"
         onChange={(e) => setBackgroundColor(e.target.value.replace("#", ""))}
       />
+
+      <button type="submit"></button>
     </div>
   );
 };

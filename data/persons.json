@@ -1,5 +1,15 @@
 {
   "persons": [
-
+    {
+      "firstName": "Adeleye",
+      "lastName": "Bolu",
+      "age": "2",
+      "gender": "",
+      "username": "axios",
+      "password": "axios",
+      "confirmPassword": "axios",
+      "profilePicUrl": "",
+      "id": 1
+    }
   ]
 }
