@@ -1,26 +1,45 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router";
 import "../styles/ProfilePic.css";
 const ProfilePic = () => {
+  const history = useNavigate();
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
+  const [finalPerson, setFinalPerson] = useState({})
   const [imageType, setImageType] = useState("male");
   const [backgroundColor, setBackgroundColor] = useState("000000");
+
   const [profilePic, setProfilePic] = useState(
     "https://avatars.dicebear.com/api/male/john.svg?background=%23000000"
   );
+
   useEffect(() => {
     setProfilePic(
       `https://avatars.dicebear.com/api/${imageType}/john.svg?background=%23${backgroundColor}`
     );
   }, [imageType, backgroundColor]);
 
+
 useEffect(() => {
-  axios.put(`http://localhost:7000/persons?username=${personInStorage.username}&firstName`, {profileUrl: profilePic})
-  .then(console.log('Done'))
-})
+  axios.get(`http://localhost:7000/persons?username=${personInStorage.username}&firstName=${personInStorage.firstName}`)
+  .then(response => setFinalPerson(response.data))
+  .catch(err => console.log(err))
+}, [finalPerson])
+
+
     
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const data = finalPerson[0]
+  console.log(profilePic)
+  axios.put(`http://localhost:7000/persons/${finalPerson[0].id}`, {...data, profilePicUrl: profilePic})
+  .then(history('/'))
+  .then(localStorage.clear())
+  .then(localStorage.setItem("personInStorage", JSON.stringify(data)))
+}
   return (
     <div>
+      <form onSubmit={handleSubmit}>
       <img src={profilePic} alt="Profile Picture" />
       <select name="imageType" onChange={(e) => setImageType(e.target.value)}>
         <option value="male">Male</option>
@@ -43,7 +62,8 @@ useEffect(() => {
         onChange={(e) => setBackgroundColor(e.target.value.replace("#", ""))}
       />
 
-      <button type="submit"></button>
+      <button type="submit">Choose Profile Picture</button>
+      </form>
     </div>
   );
 };

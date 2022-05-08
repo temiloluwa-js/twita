@@ -1,15 +1,26 @@
 {
   "persons": [
     {
-      "firstName": "Adeleye",
-      "lastName": "Bolu",
-      "age": "2",
-      "gender": "",
-      "username": "axios",
-      "password": "axios",
-      "confirmPassword": "axios",
-      "profilePicUrl": "",
+      "firstName": "Adebakin",
+      "lastName": "Ridwanullah",
+      "age": "18",
+      "gender": "Female",
+      "username": "adebakin",
+      "password": "adebakin",
+      "confirmPassword": "adebakin",
+      "profilePicUrl": "https://avatars.dicebear.com/api/adventurer/john.svg?background=%23c0c0c0",
       "id": 1
+    },
+    {
+      "firstName": "Adesare",
+      "lastName": "Adegbagi",
+      "age": "23",
+      "gender": "",
+      "username": "kyo",
+      "password": "kyo",
+      "confirmPassword": "kyo",
+      "profilePicUrl": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%23ff0000",
+      "id": 2
     }
   ]
 }
