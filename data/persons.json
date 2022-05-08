@@ -1,26 +1,15 @@
 {
   "persons": [
     {
-      "firstName": "Adebakin",
-      "lastName": "Ridwanullah",
-      "age": "18",
-      "gender": "Female",
-      "username": "adebakin",
-      "password": "adebakin",
-      "confirmPassword": "adebakin",
-      "profilePicUrl": "https://avatars.dicebear.com/api/adventurer/john.svg?background=%23c0c0c0",
-      "id": 1
-    },
-    {
-      "firstName": "Adesare",
-      "lastName": "Adegbagi",
-      "age": "23",
+      "firstName": "Adetunji",
+      "lastName": "Omowunmi",
+      "age": "11",
       "gender": "",
       "username": "kyo",
       "password": "kyo",
       "confirmPassword": "kyo",
-      "profilePicUrl": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%23ff0000",
-      "id": 2
+      "profilePicUrl": "https://avatars.dicebear.com/api/personas/john.svg?background=%23c0c0c0",
+      "id": 1
     }
   ]
 }

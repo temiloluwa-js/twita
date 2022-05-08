@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-
+import { Link } from "react-router-dom";
+import image from "./2549395.jpg";
 const Login = () => {
   const history = useNavigate();
   const [persons, setPersons] = useState([]);
@@ -16,10 +17,9 @@ const Login = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  useEffect(() => {
-    setPersons(persons);
-    console.log(persons);
-  }, [persons]);
+  // useEffect(() => {
+  //   setPersons(persons);
+  // }, [persons]);
 
   const handleSubmit = (i) => {
     persons.length && i.preventDefault();
@@ -36,14 +36,18 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="loginpage">
+      <img src={Image}/>
       <form onSubmit={handleSubmit}>
         <label htmlFor="">Username</label>
         <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <label htmlFor="">Password</label>
         <input type="text" onChange={(e) => setPassword(e.target.value)} />
         <button type="submit">Submit</button>
+        <p>Already have an account? <Link to='/register'>Register</Link></p>
+       
       </form>
+
     </div>
   );
 };
