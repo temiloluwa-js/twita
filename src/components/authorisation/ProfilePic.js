@@ -34,8 +34,7 @@ const handleSubmit = (e) => {
   console.log(profilePic)
   axios.put(`http://localhost:7000/persons/${finalPerson[0].id}`, {...data, profilePicUrl: profilePic})
   .then(history('/'))
-  .then(localStorage.clear())
-  .then(localStorage.setItem("personInStorage", JSON.stringify(data)))
+  .then(localStorage.setItem("dpurl", profilePic))
 }
   return (
     <div>
