@@ -26,7 +26,7 @@ const Register = () => {
     axios
       .post("http://localhost:7000/persons", person)
       .then(setPending(false))
-      .then(history('/'))
+      .then(history('/register/create-profile-pic'))
       .catch((err) => console.log(err));
 
   };

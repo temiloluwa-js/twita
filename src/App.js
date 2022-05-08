@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path='/' element={<ProfilePic/>} />
-          {/* <Route exact path='/register/create-profile-pic' element/> */}
+          <Route exact path='/' element={<Register/>} />
+          <Route exact path='/register/create-profile-pic' element={<ProfilePic/>}/>
         </Routes>
       </Router>
     </div>
