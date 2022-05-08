@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import "../styles/Login.css";
 import image from "./2549395.jpg";
 const Login = () => {
   const history = useNavigate();
@@ -30,24 +31,26 @@ const Login = () => {
         setPerson(i);
         localStorage.setItem("personInStorage", JSON.stringify(i));
         console.log("Person found");
-        history('/')
+        history("/");
       }
     }
   };
 
   return (
     <div className="loginpage">
-      <img src={Image}/>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="">Username</label>
-        <input type="text" onChange={(e) => setUsername(e.target.value)} />
-        <label htmlFor="">Password</label>
-        <input type="text" onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Submit</button>
-        <p>Already have an account? <Link to='/register'>Register</Link></p>
-       
-      </form>
-
+      <img src={image} className='img'/>
+      <div className="form-div">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="">Username</label>
+          <input type="text" onChange={(e) => setUsername(e.target.value)} />
+          <label htmlFor="">Password</label>
+          <input type="text" onChange={(e) => setPassword(e.target.value)} />
+          <button type="submit">Submit</button>
+          <p>
+            Already have an account? <Link to="/register">Register</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };
