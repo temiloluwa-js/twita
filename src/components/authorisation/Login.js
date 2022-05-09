@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import "../styles/Login.css";
+import styles from "../styles/Login.module.css";
 import image from "./2549395.jpg";
 const Login = () => {
   const history = useNavigate();
@@ -37,19 +37,19 @@ const Login = () => {
   };
 
   return (
-    <div className="loginpage">
-      <img src={image} className="img" />
-      <div className="form-div">
+    <div className={styles.loginpage}>
+      <img src={image} className={styles.img} />
+      <div className={styles.form_div}>
 
-        <form onSubmit={handleSubmit}>
-        <h1>twita.</h1>
-          <div>
+        <form onSubmit={handleSubmit} className={styles.form}>
+        <h1 className="h1">twita.</h1>
+          <div className={styles.form}>
             <label htmlFor="">Username</label>
             <input type="text" onChange={(e) => setUsername(e.target.value)} />
             <label htmlFor="">Password</label>
-            <input type="text" onChange={(e) => setPassword(e.target.value)} />
-            <button type="submit">Log In</button>
-            <p>
+            <input type="password" onChange={(e) => setPassword(e.target.value)} />
+            <button type="submit" className={styles.button}>Log In</button>
+            <p className={styles.p}>
               Do not have an account? <Link to="/register">Register</Link>
             </p>
           </div>

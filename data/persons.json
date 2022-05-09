@@ -18,8 +18,38 @@
       "username": "alard",
       "password": "alard",
       "confirmPassword": "alard",
-      "profilePicUrl": "",
+      "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
       "id": 2
+    },
+    {
+      "firstName": "Kakashi",
+      "lastName": "Hatake",
+      "age": "10",
+      "username": "hatake",
+      "password": "hatake",
+      "confirmPassword": "hatake",
+      "profilePicUrl": "",
+      "id": 3
+    },
+    {
+      "firstName": "Haruno",
+      "lastName": "Sakura",
+      "age": "18",
+      "username": "sakura",
+      "password": "sakura",
+      "confirmPassword": "sakura",
+      "profilePicUrl": "https://avatars.dicebear.com/api/micah/john.svg?background=%238000ff",
+      "id": 4
+    },
+    {
+      "firstName": "Maki",
+      "lastName": "Zenin",
+      "age": "19",
+      "username": "maki",
+      "password": "maki",
+      "confirmPassword": "maki",
+      "profilePicUrl": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%2380ff00",
+      "id": 5
     }
   ]
 }

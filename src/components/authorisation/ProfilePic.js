@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import "../styles/ProfilePic.css";
+import styles from "../styles/ProfilePic.module.css";
 import image from "./2549395.jpg";
 const ProfilePic = () => {
   const history = useNavigate();
@@ -38,19 +38,21 @@ const ProfilePic = () => {
         ...data,
         profilePicUrl: profilePic,
       })
-      .then(history("/"))
-      .then(localStorage.setItem("dpurl", profilePic));
+      .then(localStorage.setItem("dpurl", profilePic))
+      .then(history("/"));
   };
   return (
-    <div className="loginpage">
-      <img src={image} alt="Wallpaper Doodle" />
-      <div className="form-div">
-        <form onSubmit={handleSubmit}>
+    <div className={styles.loginpage}>
+      <img src={image} alt="Wallpaper Doodle" className={styles.img} />
+      <div className={styles.form_div}>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <div>
-            <img src={profilePic} alt="Profile Picture" className="dp"/>
+            <img src={profilePic} alt="Profile Picture" className={styles.dp} />
+            <label className={styles.label}>Profile Picture Style</label>
             <select
               name="imageType"
               onChange={(e) => setImageType(e.target.value)}
+              className={styles.select}
             >
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -67,14 +69,18 @@ const ProfilePic = () => {
               <option value="bottts">Bottts</option>
             </select>
 
+            <label className={styles.label}>Background Color</label>
             <input
               type="color"
+              className={styles.input}
               onChange={(e) =>
                 setBackgroundColor(e.target.value.replace("#", ""))
               }
             />
 
-            <button type="submit">Choose Profile Picture</button>
+            <button type="submit" className={styles.button}>
+              Choose Profile Picture
+            </button>
           </div>
         </form>
       </div>

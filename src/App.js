@@ -12,7 +12,8 @@ function App() {
         <Routes>
           <Route exact path="/register" element={<Register/>}/>
           <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/login' element={<Login/>} /> 
+          <Route exact path="/login" element={<Login/>}/>
+
           <Route exact path='/register/create-profile-pic' element={<ProfilePic/>}/>
         </Routes>
       </Router>

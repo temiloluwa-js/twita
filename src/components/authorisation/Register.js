@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import "../styles/Register.css";
+import  styles from "../styles/Register.module.css";
 import image from "./2549395.jpg";
 const Register = () => {
   const history = useNavigate();
@@ -15,7 +15,7 @@ const Register = () => {
     confirmPassword: "",
     profilePicUrl: "",
   });
-
+   
   const handleSubmit = (e) => {
     e.preventDefault();
     const personInStorage = localStorage.getItem("personInStorage");
@@ -30,10 +30,10 @@ const Register = () => {
   };
 
   return (
-    <div className="loginpage">
-      <img src={image} className="img" />
-      <div className="form-div">
-        <form className="register" onSubmit={handleSubmit}>
+    <div className={styles.loginpage}>
+      <img src={image} className={styles.img} />
+      <div className={styles.form_div}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <h1>twita.</h1>
           <div>
             <label htmlFor="firstName">First Name</label>
@@ -78,7 +78,7 @@ const Register = () => {
               }
             />
           </div>
-          {pending ? <button>Loading...</button> : <button>Register</button>}
+          {pending ? <button>Loading...</button> : <button className={styles.button}>Register</button>}
         </form>
       </div>
     </div>
