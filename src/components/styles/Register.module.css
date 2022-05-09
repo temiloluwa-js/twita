@@ -6,25 +6,20 @@
 
 }
 
-/* .loginpage_wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 80%;
-  width: 100%;
-  max-width: 1800px;
-  border: 5px solid blueviolet;
-} */
+.error{
+  margin: auto;
+  color: red;
+}
 
 .img {
   width: 60%;
   height: 60%;
-  border: 1px solid blue;
   height: 100%;
   object-fit: cover;
 }
 
 .form_div {
+  
     display: flex;
     height: 90%;
     width: 90%;
@@ -36,6 +31,7 @@
 }
 
 .form {
+
   width: 40%;
   margin: auto;
   padding: 2rem;
@@ -49,15 +45,19 @@
 }
 
 .form div {
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .form div label {
+  padding-block-start: .8em;
+  padding-block-end: .5em;
+  font-weight: bold;
   width: 70%;
   margin: auto;
-  font-size: clamp(1rem, 1.5vw, 1in);
+  font-size: clamp(20px, 1.5vw, 25px);
 }
 
 .form h1 {
@@ -65,21 +65,21 @@
   font-size: clamp(1rem, 3vw, 1.5in);
 }
 
-.form input,
-.form input:active {
+.form input{
+  
   width: 70%;
+  padding-block: .2em;
   margin: auto;
-  border-top: none;
+  border: 1px solid black;
+  border-radius: 2%;
   font-size: clamp(1rem, 1.5vw, 1.5in);
-  border-bottom: 5px solid black;
-  border-left: none;
-  border-right: none;
 }
 
 .form input:focus{
-    outline: none;
-    border-bottom: 10px solid grey;
+  border: 3px solid #000;
+  outline: none;
 }
+
 
 .button {
   width: 70%;
@@ -99,10 +99,7 @@
   color: white;
 }
 
-.error{
-  font-size: clamp(.5rem, 1.5vw, .5in);
-  color: red;
-}
+
 
 @media screen and (max-width: 1400px){
   .img{
@@ -118,7 +115,13 @@
     width: 60%;
   }
 
+
   .form input, .form div label, .button{
     width: 95%;
+  }
+
+  .form div label{
+    padding-block-start: .7em;
+    padding-block-end: .4em;
   }
 }

@@ -28,25 +28,25 @@ const Login = () => {
       errors.password = "please enter a valid password";
     }
 
-    // if (values.username) {
-    //   for (let i of persons) {
-    //     if(i.username != values.username) {
-    //       void(0)
-    //     }
-    //     console.log('found')
-    //   }
-    // }
+    if (values.username) {
+      for (let i of persons) {
+        if(i.username != values.username) {
+          void(0)
+        }
+        console.log('found')
+      }
+    }
 
-    // if (values.password) {
-    //   for (let i of persons) {
-    //     if (i.password != values.password) {
-    //       setErrorList(prevError => prevError + 1)
-    //     }
-    //   }
-    //   if (errorList == persons.length){
-    //     errors.password = 'please enter a valid password'
-    //   }
-    // }
+    if (values.password) {
+      for (let i of persons) {
+        if (i.password != values.password) {
+          void(0)
+        }
+      }
+      if (errorList == persons.length){
+        errors.password = 'please enter a valid password'
+      }
+    }
 
     return errors;
   };

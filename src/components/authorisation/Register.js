@@ -73,7 +73,7 @@ const Register = () => {
           : localStorage.setItem("personInStorage", JSON.stringify(values));
         axios
           .post("http://localhost:7000/persons", values)
-          .then(setPending(false))
+          .then(setTimeout(() => setPending(false), 1500))
           .then(history("/register/create-profile-pic"))
           .catch((err) => console.log(err));
       }
@@ -83,92 +83,95 @@ const Register = () => {
 
   return (
     <div className={styles.loginpage}>
-        <div className={styles.form_div}>
+      <div className={styles.form_div}>
         <img src={image} className={styles.img} />
-          <form className={styles.form} onSubmit={formik.handleSubmit}>
-            <h1>twita.</h1>
-            <div>
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                onChange={formik.handleChange}
-                value={formik.values.firstName}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.firstName && formik.errors.firstName ? (
-                <div className={styles.error}>{formik.errors.firstName}</div>
-              ) : null}
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                type="text"
-                id="lastName"
-                onChange={formik.handleChange}
-                value={formik.values.lastName}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.lastName && formik.errors.lastName && (
-                <div className={styles.error}>{formik.errors.lastName}</div>
-              )}
-              <label htmlFor="dateOfBirth">Date Of Birth</label>
-              <input
-                type="date"
-                id="dateOfBirth"
-                onChange={formik.handleChange}
-                value={formik.values.dateOfBirth}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.dateOfBirth && formik.errors.dateOfBirth && (
-                <div className={styles.error}>{formik.errors.dateOfBirth}</div>
-              )}
-
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                id="username"
-                onChange={formik.handleChange}
-                value={formik.values.username}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.username && formik.errors.username && (
-                <div className={styles.error}>{formik.errors.username}</div>
-              )}
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                onChange={formik.handleChange}
-                value={formik.values.password}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.password && formik.errors.password && (
-                <div className={styles.error}>{formik.errors.password}</div>
-              )}
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                onChange={formik.handleChange}
-                value={formik.values.confirmPassword}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.confirmPassword &&
-                formik.errors.confirmPassword && (
-                  <div className={styles.error}>
-                    {formik.errors.confirmPassword}
-                  </div>
-                )}
-            </div>
-            {pending ? (
-              <button className={styles.button}>Creating account...</button>
-            ) : (
-              <button type="submit" className={styles.button}>
-                Register
-              </button>
+        <form className={styles.form} onSubmit={formik.handleSubmit}>
+          <h1>twita.</h1>
+          <div>
+            <label htmlFor="firstName">First Name</label>
+            {formik.touched.firstName && formik.errors.firstName && (
+              <p className={styles.error}>{formik.errors.firstName}</p>
             )}
-          </form>
-        </div>
+            <input
+              type="text"
+              id="firstName"
+              onChange={formik.handleChange}
+              value={formik.values.firstName}
+              onBlur={formik.handleBlur}
+            />
 
+            <label htmlFor="lastName">Last Name</label>
+            {formik.touched.lastName && formik.errors.lastName && (
+              <p className={styles.error}>{formik.errors.lastName}</p>
+            )}
+            <input
+              type="text"
+              id="lastName"
+              onChange={formik.handleChange}
+              value={formik.values.lastName}
+              onBlur={formik.handleBlur}
+            />
+
+            <label htmlFor="dateOfBirth">Date Of Birth</label>
+            {formik.touched.dateOfBirth && formik.errors.dateOfBirth && (
+              <p className={styles.error}>{formik.errors.dateOfBirth}</p>
+            )}
+            <input
+              type="date"
+              id="dateOfBirth"
+              onChange={formik.handleChange}
+              value={formik.values.dateOfBirth}
+              onBlur={formik.handleBlur}
+            />
+
+            <label htmlFor="username">Username</label>
+            {formik.touched.username && formik.errors.username && (
+              <p className={styles.error}>{formik.errors.username}</p>
+            )}
+            <input
+              type="text"
+              id="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+              onBlur={formik.handleBlur}
+            />
+
+            <label htmlFor="password">Password</label>
+            {formik.touched.password && formik.errors.password && (
+              <p className={styles.error}>{formik.errors.password}</p>
+            )}
+            <input
+              type="password"
+              id="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              onBlur={formik.handleBlur}
+            />
+
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            {formik.touched.confirmPassword &&
+              formik.errors.confirmPassword && (
+                <p className={styles.error}>
+                  {formik.errors.confirmPassword}
+                </p>
+              )}
+            <input
+              type="password"
+              id="confirmPassword"
+              onChange={formik.handleChange}
+              value={formik.values.confirmPassword}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          {pending ? (
+            <button className={styles.button}>Creating account...</button>
+          ) : (
+            <button type="submit" className={styles.button}>
+              REGISTER
+            </button>
+          )}
+        </form>
+      </div>
     </div>
   );
 };

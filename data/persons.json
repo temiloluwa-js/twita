@@ -60,6 +60,16 @@
       "confirmPassword": "uri",
       "profilePicUrl": "https://avatars.dicebear.com/api/female/john.svg?background=%238000ff",
       "id": 6
+    },
+    {
+      "firstName": "Adesare",
+      "lastName": "Adegbagi",
+      "dateOfBirth": "2022-05-05",
+      "username": "gbagi",
+      "password": "gbagi",
+      "confirmPassword": "gbagi",
+      "profilePicUrl": "https://avatars.dicebear.com/api/bottts/john.svg?background=%23408080",
+      "id": 7
     }
   ]
 }
