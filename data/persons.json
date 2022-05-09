@@ -70,6 +70,16 @@
       "confirmPassword": "gbagi",
       "profilePicUrl": "https://avatars.dicebear.com/api/bottts/john.svg?background=%23408080",
       "id": 7
+    },
+    {
+      "firstName": "Adeleye",
+      "lastName": "Abdulrazaq",
+      "dateOfBirth": "2022-05-04",
+      "username": "abaki",
+      "password": "abaki",
+      "confirmPassword": "abaki",
+      "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "id": 8
     }
   ]
 }

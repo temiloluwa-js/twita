@@ -19,7 +19,7 @@
 }
 
 .form_div {
-  
+    border: 10px solid yellow;
     display: flex;
     height: 90%;
     width: 90%;
@@ -31,22 +31,23 @@
 }
 
 .form {
-
-  width: 40%;
+border: 1px solid blue;
+  width: 100%;
   margin: auto;
-  padding: 2rem;
   max-width: 500px;
   display: flex;
   align-self: center;
   justify-items: center;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
 .form div {
-
+  border: 1px solid red;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -64,6 +65,7 @@
   text-align: center;
   font-size: clamp(1rem, 3vw, 1.5in);
 }
+
 
 .form input{
   
@@ -120,8 +122,5 @@
     width: 95%;
   }
 
-  .form div label{
-    padding-block-start: .7em;
-    padding-block-end: .4em;
-  }
+
 }

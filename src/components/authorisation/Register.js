@@ -85,6 +85,7 @@ const Register = () => {
     <div className={styles.loginpage}>
       <div className={styles.form_div}>
         <img src={image} className={styles.img} />
+        
         <form className={styles.form} onSubmit={formik.handleSubmit}>
           <h1>twita.</h1>
           <div>

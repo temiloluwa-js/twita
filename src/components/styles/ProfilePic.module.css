@@ -1,103 +1,91 @@
-.dp {
-  align-self: center;
-  height: 300px;
-  width: 300px;
-}
-.label {
-  align-self: center;
-  font-weight: bold;
-  font-size: clamp(1rem, 1.5vw, 1in);
-}
-.select {
-  width: 80%;
-  padding: 0.5rem;
-  align-self: center;
-  margin-block-start: 3rem;
-  border-top: none;
-  border-bottom: 6px solid black;
-  border-right: none;
-  border-left: none;
-  border-radius: none;
-  background-color: white;
-  font-size: clamp(1rem, 1.5vw, 1in);
-}
-
-.input {
-  margin-block-start: 3rem;
-  align-self: center;
-  width: 50%;
-  height: 80px;
-  outline: none;
-  font-size: clamp(1rem, 1.5vw, 1in);
-}
-
-button {
-  font-size: clamp(1rem, 1.5vw, 1in);
-}
-
 .loginpage {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  background-color: gray;
+
+}
+
+.error{
+  margin: auto;
+  color: red;
 }
 
 .img {
   width: 60%;
+  height: 60%;
   height: 100%;
   object-fit: cover;
 }
 
 .form_div {
-  display: grid;
-  place-items: center;
-  width: 30%;
+    border: 1px solid red;
+    display: flex;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    align-self: center;
+    background-color: white;
+    border: 2px solid black;
+    transition: all .4s;
 }
 
 .form {
+  border: 1px solid red;
+  width: 40%;
+  margin: auto;
   padding: 2rem;
-  border: 5px solid white;
-  width: 100%;
   max-width: 500px;
+  display: flex;
+  align-self: center;
+  justify-items: center;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
 .form div {
+
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .form div label {
-  font-size: clamp(1rem, 1.5vw, 1in);
-  margin-block-start: 3rem;
+  padding-block-start: .8em;
+  padding-block-end: .5em;
+  font-weight: bold;
+  width: 70%;
+  margin: auto;
+  font-size: clamp(20px, 1.5vw, 25px);
 }
 
 .form h1 {
   text-align: center;
-  margin-block-end: 1rem;
-  font-size: clamp(2rem, 3vw, 2in);
+  font-size: clamp(1rem, 3vw, 1.5in);
 }
 
-.form input,
-.form input:active {
-  border-top: none;
-  font-size: clamp(1rem, 1.5vw, 1in);
-  border-bottom: 5px solid black;
-  border-left: none;
-  border-right: none;
+.form input{
+  
+  width: 70%;
+  padding-block: .2em;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 2%;
+  font-size: clamp(1rem, 1.5vw, 1.5in);
 }
 
-.form input:focus {
+.form input:focus{
+  border: 3px solid #000;
   outline: none;
-  border-bottom: 10px solid grey;
 }
+
 
 .button {
+  width: 70%;
+  margin: auto;
   padding-block: 0.4rem;
-  margin-block-start: 3rem;
+  margin-block-start: 4rem;
   border-radius: none;
   border: 2px solid black;
   background-color: white;
@@ -111,7 +99,29 @@ button {
   color: white;
 }
 
-.p {
-  align-self: center;
-  margin-block-start: 2rem;
+
+
+@media screen and (max-width: 1400px){
+  .img{
+    width: 40%;
+    border-radius: 0%;
+  }
+
+  .form_div{
+    width: 95%;
+    height: 80%;
+  }
+  .form{
+    width: 60%;
+  }
+
+
+  .form input, .form div label, .button{
+    width: 95%;
+  }
+
+  .form div label{
+    padding-block-start: .7em;
+    padding-block-end: .4em;
+  }
 }

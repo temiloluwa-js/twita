@@ -62,7 +62,7 @@
   border-right: none;
 }
 
-.form_div form input:focus {
+.form_div input:focus {
   outline: none;
   border-bottom: 10px solid grey;
 }

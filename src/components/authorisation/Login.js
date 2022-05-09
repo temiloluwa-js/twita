@@ -28,25 +28,25 @@ const Login = () => {
       errors.password = "please enter a valid password";
     }
 
-    if (values.username) {
-      for (let i of persons) {
-        if(i.username != values.username) {
-          void(0)
-        }
-        console.log('found')
-      }
-    }
+    // if (values.username) {
+    //   for (let i of persons) {
+    //     if(i.username != values.username) {
+    //       void(0)
+    //     }
+    //     console.log('found')
+    //   }
+    // }
 
-    if (values.password) {
-      for (let i of persons) {
-        if (i.password != values.password) {
-          void(0)
-        }
-      }
-      if (errorList == persons.length){
-        errors.password = 'please enter a valid password'
-      }
-    }
+    // if (values.password) {
+    //   for (let i of persons) {
+    //     if (i.password != values.password) {
+    //       setErrorList(prevError => prevError + 1)
+    //     }
+    //   }
+    //   if (errorList == persons.length){
+    //     errors.password = 'please enter a valid password'
+    //   }
+    // }
 
     return errors;
   };
@@ -78,7 +78,7 @@ const Login = () => {
       <div className={styles.form_div}>
         <form onSubmit={formik.handleSubmit} className={styles.form}>
           <h1 className="h1">twita.</h1>
-          
+          <div className={styles.form}>
             <input
               type="text"
               placeholder="username"
@@ -107,7 +107,7 @@ const Login = () => {
             <p className={styles.p}>
               Do not have an account? <Link to="/register">Register</Link>
             </p>
-          
+          </div>
         </form>
       </div>
     </div>

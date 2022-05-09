@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 import styles from "../styles/ProfilePic.module.css";
 import image from "./2549395.jpg";
 const ProfilePic = () => {
@@ -42,8 +42,9 @@ const ProfilePic = () => {
   };
   return (
     <div className={styles.loginpage}>
-      <img src={image} alt="Wallpaper Doodle" className={styles.img} />
       <div className={styles.form_div}>
+        <img src={image} alt="Wallpaper Doodle" className={styles.img} />
+
         <form onSubmit={handleSubmit} className={styles.form}>
           <div>
             <img src={profilePic} alt="Profile Picture" className={styles.dp} />
