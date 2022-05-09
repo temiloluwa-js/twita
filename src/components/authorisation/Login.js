@@ -44,9 +44,9 @@ const Login = () => {
         <form onSubmit={handleSubmit} className={styles.form}>
         <h1 className="h1">twita.</h1>
           <div className={styles.form}>
-            <label htmlFor="">Username</label>
+            <label htmlFor="username">Username</label>
             <input type="text" onChange={(e) => setUsername(e.target.value)} />
-            <label htmlFor="">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" onChange={(e) => setPassword(e.target.value)} />
             <button type="submit" className={styles.button}>Log In</button>
             <p className={styles.p}>
