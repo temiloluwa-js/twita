@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate} from "react-router";
 import styles from "../styles/ProfilePic.module.css";
 import image from "./2549395.jpg";
 const ProfilePic = () => {
@@ -32,7 +32,6 @@ const ProfilePic = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = finalPerson[0];
-    console.log(profilePic);
     axios
       .put(`http://localhost:7000/persons/${finalPerson[0].id}`, {
         ...data,

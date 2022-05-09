@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -8,8 +9,7 @@ const Login = () => {
   const history = useNavigate();
   const [persons, setPersons] = useState([]);
   const [person, setPerson] = useState({});
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [errorList, setErrorList] = useState(0);
 
   useEffect(() => {
     axios
@@ -18,41 +18,96 @@ const Login = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  // useEffect(() => {
-  //   setPersons(persons);
-  // }, [persons]);
+  const validate = (values) => {
+    const errors = {};
+    
 
-  const handleSubmit = (i) => {
-    persons.length && i.preventDefault();
-    console.log(persons);
-    for (i of persons) {
-      if (i.username == username && i.password == password) {
-        console.log(i);
-        setPerson(i);
-        localStorage.setItem("personInStorage", JSON.stringify(i));
-        console.log("Person found");
-        history("/");
-      }
+    if (!values.username) {
+      errors.username = "please enter a valid username";
+    } else if (!values.password) {
+      errors.password = "please enter a valid password";
     }
+
+    // if (values.username) {
+    //   for (let i of persons) {
+    //     if(i.username != values.username) {
+    //       void(0)
+    //     }
+    //     console.log('found')
+    //   }
+    // }
+
+    // if (values.password) {
+    //   for (let i of persons) {
+    //     if (i.password != values.password) {
+    //       setErrorList(prevError => prevError + 1)
+    //     }
+    //   }
+    //   if (errorList == persons.length){
+    //     errors.password = 'please enter a valid password'
+    //   }
+    // }
+
+    return errors;
   };
+
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      if (formik.errors.length > 0) {
+        void(0);
+      } else {
+        for (let i of persons) {
+          if (i.username == values.username && i.password == values.password) {
+            setPerson(i);
+            localStorage.setItem("personInStorage", JSON.stringify(i));
+            history("/");
+          }
+        }
+      }
+    },
+    validate,
+  });
 
   return (
     <div className={styles.loginpage}>
       <img src={image} className={styles.img} />
       <div className={styles.form_div}>
-
-        <form onSubmit={handleSubmit} className={styles.form}>
-        <h1 className="h1">twita.</h1>
-          <div className={styles.form}>
-            <label htmlFor="username">Username</label>
-            <input type="text" onChange={(e) => setUsername(e.target.value)} />
-            <label htmlFor="password">Password</label>
-            <input type="password" onChange={(e) => setPassword(e.target.value)} />
-            <button type="submit" className={styles.button}>Log In</button>
+        <form onSubmit={formik.handleSubmit} className={styles.form}>
+          <h1 className="h1">twita.</h1>
+          
+            <input
+              type="text"
+              placeholder="username"
+              name="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.username && formik.errors.username && (
+              <div className={styles.error}>{formik.errors.username}</div>
+            )}
+            <input
+              type="password"
+              placeholder="password"
+              name="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.password && formik.errors.password && (
+              <div className={styles.error}>{formik.errors.password}</div>
+            )}
+            <button type="submit" className={styles.button}>
+              Log In
+            </button>
             <p className={styles.p}>
               Do not have an account? <Link to="/register">Register</Link>
             </p>
-          </div>
+          
         </form>
       </div>
     </div>

@@ -2,25 +2,47 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  background-color: gray;
+
+}
+
+/* .loginpage_wrapper{
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+  height: 80%;
+  width: 100%;
+  max-width: 1800px;
+  border: 5px solid blueviolet;
+} */
 
 .img {
   width: 60%;
+  height: 60%;
+  border: 1px solid blue;
   height: 100%;
   object-fit: cover;
 }
 
 .form_div {
-    display: grid;
-    place-items: center;
+    display: flex;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    align-self: center;
+    background-color: white;
+    border: 2px solid black;
+    transition: all .4s;
 }
 
 .form {
+  width: 40%;
+  margin: auto;
   padding: 2rem;
-
   max-width: 500px;
+  display: flex;
+  align-self: center;
+  justify-items: center;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -33,18 +55,22 @@
 }
 
 .form div label {
+  width: 70%;
+  margin: auto;
   font-size: clamp(1rem, 1.5vw, 1in);
 }
 
 .form h1 {
   text-align: center;
-  font-size: clamp(2rem, 3vw, 2in);
+  font-size: clamp(1rem, 3vw, 1.5in);
 }
 
 .form input,
 .form input:active {
+  width: 70%;
+  margin: auto;
   border-top: none;
-  font-size: clamp(1rem, 1.5vw, 1in);
+  font-size: clamp(1rem, 1.5vw, 1.5in);
   border-bottom: 5px solid black;
   border-left: none;
   border-right: none;
@@ -56,6 +82,8 @@
 }
 
 .button {
+  width: 70%;
+  margin: auto;
   padding-block: 0.4rem;
   margin-block-start: 4rem;
   border-radius: none;
@@ -74,4 +102,23 @@
 .error{
   font-size: clamp(.5rem, 1.5vw, .5in);
   color: red;
+}
+
+@media screen and (max-width: 1400px){
+  .img{
+    width: 40%;
+    border-radius: 0%;
+  }
+
+  .form_div{
+    width: 95%;
+    height: 80%;
+  }
+  .form{
+    width: 60%;
+  }
+
+  .form input, .form div label, .button{
+    width: 95%;
+  }
 }

@@ -50,6 +50,16 @@
       "confirmPassword": "maki",
       "profilePicUrl": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%2380ff00",
       "id": 5
+    },
+    {
+      "firstName": "Adeola",
+      "lastName": "Baliqees",
+      "dateOfBirth": "2022-05-04",
+      "username": "uri",
+      "password": "uri",
+      "confirmPassword": "uri",
+      "profilePicUrl": "https://avatars.dicebear.com/api/female/john.svg?background=%238000ff",
+      "id": 6
     }
   ]
 }

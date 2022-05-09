@@ -13,6 +13,7 @@ const Home = () => {
       <img src={person.profilePicUrl} width='200px' height='200px'/>
        {person && <h1>person {person.firstName} {person.lastName}</h1>}
        <button onClick={handleClick}>Log Out</button>
+       <button>Make  A Post</button>
     </div>
   )
 }

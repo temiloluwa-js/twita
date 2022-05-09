@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 .App {
-  margin: 0px;
-  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 *{

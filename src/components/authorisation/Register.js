@@ -21,29 +21,28 @@ const Register = () => {
       console.log("Breh");
       for (let i of profiles) {
         if (i["username"] == values.username) {
-          errors.username = "Username already chosen";
-          console.log("Username already chosen");
+          errors.username = "username not available";
         }
       }
     } else if (!values.username) {
-      errors.username = "Required";
+      errors.username = "enter your username";
       console.log(errors.username);
     }
 
     if (!values.firstName) {
-      errors.firstName = "Required";
+      errors.firstName = "enter your first name";
     } else if (!values.lastName) {
-      errors.lastName = "Required";
+      errors.lastName = "enter your last name";
     } else if (!values.dateOfBirth) {
-      errors.dateOfBirth = "Required";
+      errors.dateOfBirth = "choose date of birth";
     } else if (!values.username) {
-      errors.username = "Required";
+      errors.username = "enter your desired username";
     }
 
     if (!values.password) {
-      errors.password = "Required";
+      errors.password = "enter a password";
     } else if (!values.confirmPassword) {
-      errors.confirmPassword = "Required";
+      errors.confirmPassword = "please confirm your password";
     }
 
     if (values.password != values.confirmPassword) {
@@ -51,7 +50,7 @@ const Register = () => {
     }
     return errors;
   };
-
+  const history = useNavigate();
   const [pending, setPending] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -65,11 +64,18 @@ const Register = () => {
     },
     onSubmit: (values) => {
       if (formik.errors.length > 0) {
-        console.log("");
+        void 0;
       } else {
         setPending(true);
-        alert(JSON.stringify(values));
-        setTimeout(() => setPending(false), 3000);
+        const personInStorage = localStorage.getItem("personInStorage");
+        personInStorage
+          ? localStorage.setItem("personInStorage", JSON.stringify(values))
+          : localStorage.setItem("personInStorage", JSON.stringify(values));
+        axios
+          .post("http://localhost:7000/persons", values)
+          .then(setPending(false))
+          .then(history("/register/create-profile-pic"))
+          .catch((err) => console.log(err));
       }
     },
     validate,
@@ -77,91 +83,92 @@ const Register = () => {
 
   return (
     <div className={styles.loginpage}>
-      <img src={image} className={styles.img} />
-      <div className={styles.form_div}>
-        <form className={styles.form} onSubmit={formik.handleSubmit}>
-          <h1>twita.</h1>
-          <div>
-            <label htmlFor="firstName">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              onChange={formik.handleChange}
-              value={formik.values.firstName}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.firstName && formik.errors.firstName ? (
-              <div className={styles.error}>{formik.errors.firstName}</div>
-            ) : null}
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              onChange={formik.handleChange}
-              value={formik.values.lastName}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.lastName && formik.errors.lastName && (
-              <div className={styles.error}>{formik.errors.lastName}</div>
-            )}
-            <label htmlFor="dateOfBirth">Date Of Birth</label>
-            <input
-              type="date"
-              id="dateOfBirth"
-              onChange={formik.handleChange}
-              value={formik.values.dateOfBirth}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.dateOfBirth && formik.errors.dateOfBirth && (
-              <div className={styles.error}>{formik.errors.dateOfBirth}</div>
-            )}
-
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              onChange={formik.handleChange}
-              value={formik.values.username}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.username && formik.errors.username && (
-              <div className={styles.error}>{formik.errors.username}</div>
-            )}
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.password && formik.errors.password && (
-              <div className={styles.error}>{formik.errors.password}</div>
-            )}
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              onChange={formik.handleChange}
-              value={formik.values.confirmPassword}
-              onBlur={formik.handleBlur}
-            />
-            {formik.touched.confirmPassword &&
-              formik.errors.confirmPassword && (
-                <div className={styles.error}>
-                  {formik.errors.confirmPassword}
-                </div>
+        <div className={styles.form_div}>
+        <img src={image} className={styles.img} />
+          <form className={styles.form} onSubmit={formik.handleSubmit}>
+            <h1>twita.</h1>
+            <div>
+              <label htmlFor="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                onChange={formik.handleChange}
+                value={formik.values.firstName}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.firstName && formik.errors.firstName ? (
+                <div className={styles.error}>{formik.errors.firstName}</div>
+              ) : null}
+              <label htmlFor="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                onChange={formik.handleChange}
+                value={formik.values.lastName}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.lastName && formik.errors.lastName && (
+                <div className={styles.error}>{formik.errors.lastName}</div>
               )}
-          </div>
-          {pending ? (
-            <button className={styles.button}>Loading...</button>
-          ) : (
-            <button type="submit" className={styles.button}>
-              Register
-            </button>
-          )}
-        </form>
-      </div>
+              <label htmlFor="dateOfBirth">Date Of Birth</label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                onChange={formik.handleChange}
+                value={formik.values.dateOfBirth}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.dateOfBirth && formik.errors.dateOfBirth && (
+                <div className={styles.error}>{formik.errors.dateOfBirth}</div>
+              )}
+
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                onChange={formik.handleChange}
+                value={formik.values.username}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.username && formik.errors.username && (
+                <div className={styles.error}>{formik.errors.username}</div>
+              )}
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.password && formik.errors.password && (
+                <div className={styles.error}>{formik.errors.password}</div>
+              )}
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                onChange={formik.handleChange}
+                value={formik.values.confirmPassword}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.confirmPassword &&
+                formik.errors.confirmPassword && (
+                  <div className={styles.error}>
+                    {formik.errors.confirmPassword}
+                  </div>
+                )}
+            </div>
+            {pending ? (
+              <button className={styles.button}>Creating account...</button>
+            ) : (
+              <button type="submit" className={styles.button}>
+                Register
+              </button>
+            )}
+          </form>
+        </div>
+
     </div>
   );
 };
@@ -182,13 +189,3 @@ export default Register;
 // const handleSubmit = (e) => {
 
 //   e.preventDefault();
-//   const personInStorage = localStorage.getItem("personInStorage");
-//   personInStorage
-//     ? localStorage.setItem("personInStorage", JSON.stringify(person))
-//     : localStorage.setItem("personInStorage", JSON.stringify(person));
-//   axios
-//     .post("http://localhost:7000/persons", person)
-//     .then(setPending(false))
-//     .then(history("/register/create-profile-pic"))
-//     .catch((err) => console.log(err));
-// };
