@@ -10,6 +10,12 @@
   color: red;
 }
 
+.logo{
+  width: 70px;
+  height: 100px;
+  align-self: center;
+}
+
 .img {
   width: 60%;
   height: 60%;
@@ -27,7 +33,6 @@
   border: 10px solid yellow;
   display: flex;
   height: 90%;
-  justify-content: space-between;
   margin: auto;
   align-self: center;
   background-color: white;
@@ -39,6 +44,7 @@
   height: 100%;
   border: 1px solid red;
   display: flex;
+  margin: auto;
   max-width: 500px;
   width: 100%;
 

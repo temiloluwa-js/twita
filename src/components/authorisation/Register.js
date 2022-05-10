@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import styles from "../styles/Register.module.css";
 import image from "./kindpng_4274389.png";
+import logo from './tt.png'
 
 const Register = () => {
   const [profiles, setProfiles] = useState([]);
@@ -84,9 +85,14 @@ const Register = () => {
   return (
     <div className={styles.loginpage}>
       <div className={styles.form_div}>
+        
         <img src={image} className={styles.img} />
 
         <form onSubmit={formik.handleSubmit} className={styles.form}>
+        <div>
+          <img src={logo} alt="Logo" className={styles.logo}/>
+          <h1>Register</h1>
+        </div>
           <div className={styles.form_details}>
             <div>
               <label htmlFor="firstName">First Name</label>
