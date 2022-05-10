@@ -62,7 +62,7 @@ const Login = () => {
         if (i.username == values.username && i.password == values.password) {
           setPerson(i);
           localStorage.setItem("personInStorage", JSON.stringify(i));
-          history("/");
+          history("/home");
         }
       }
     },

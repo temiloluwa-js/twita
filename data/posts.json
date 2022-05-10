@@ -54,6 +54,39 @@
       "creatorFirstName": "Uzumaki",
       "creatorLastName": "Naruto",
       "id": 5
+    },
+    {
+      "postContent": "I'm hungry.",
+      "comments": "",
+      "likes": "",
+      "datePosted": "11/05/2022, 00:05:33",
+      "creator": "uzui",
+      "creatorDp": "",
+      "creatorFirstName": "Uzui",
+      "creatorLastName": "Tengen",
+      "id": 6
+    },
+    {
+      "postContent": "Hoping to fix the profile picture error soon. 😎",
+      "comments": "",
+      "likes": "",
+      "datePosted": "11/05/2022, 00:08:29",
+      "creator": "tanjiro",
+      "creatorDp": "",
+      "creatorFirstName": "Tanjiro",
+      "creatorLastName": "Kamado",
+      "id": 7
+    },
+    {
+      "postContent": "😶🧊🔗",
+      "comments": "",
+      "likes": "",
+      "datePosted": "11/05/2022, 00:09:12",
+      "creator": "uzui",
+      "creatorDp": "",
+      "creatorFirstName": "Uzui",
+      "creatorLastName": "Tengen",
+      "id": 8
     }
   ]
 }

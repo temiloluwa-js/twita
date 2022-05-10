@@ -14,11 +14,11 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/create_post" element={<CreatePost />} />
           {person ? (
-            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
           ) : (
             <Route exact path="/" element={<Login />} />
           )}
-          <Route exact path="/" element={<Home />} />  
+          <Route exact path="/home" element={<Home />} />  
           <Route exact path="/login" element={<Login />} />
           <Route
             exact

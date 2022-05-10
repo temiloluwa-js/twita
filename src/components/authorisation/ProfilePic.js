@@ -38,7 +38,7 @@ const ProfilePic = () => {
         profilePicUrl: profilePic,
       })
       .then(localStorage.setItem("dpurl", profilePic))
-      .then(history("/"));
+      .then(history("/home"));
   };
   return (
     <div className={styles.register_page}>

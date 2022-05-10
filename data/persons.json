@@ -19,6 +19,36 @@
       "confirmPassword": "uzumaki",
       "profilePicUrl": "https://avatars.dicebear.com/api/adventurer/john.svg?background=%23ffff00",
       "id": 2
+    },
+    {
+      "firstName": "Uzui",
+      "lastName": "Tengen",
+      "dateOfBirth": "2022-05-07",
+      "username": "uzui",
+      "password": "uzui",
+      "confirmPassword": "uzui",
+      "profilePicUrl": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%238080ff",
+      "id": 3
+    },
+    {
+      "firstName": "Tanjiro",
+      "lastName": "Kamado",
+      "dateOfBirth": "2022-05-07",
+      "username": "tanjiro",
+      "password": "tanjiro",
+      "confirmPassword": "tanjiro",
+      "profilePicUrl": "https://avatars.dicebear.com/api/micah/john.svg?background=%2300ff00",
+      "id": 4
+    },
+    {
+      "firstName": "Akintunde",
+      "lastName": "Blabla",
+      "dateOfBirth": "2022-05-03",
+      "username": "blabla",
+      "password": "blabla",
+      "confirmPassword": "blabla",
+      "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "id": 5
     }
   ]
 }
