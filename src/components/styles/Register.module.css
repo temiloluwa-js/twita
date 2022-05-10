@@ -1,38 +1,47 @@
-.loginpage {
+.register_page {
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color: gray;
+  background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
 }
 
 .error {
-  margin: auto;
   color: red;
 }
 
-.logo{
-  width: 70px;
-  height: 100px;
+.logo img {
+  width: 200px;
+  height: 200px;
   align-self: center;
+}
+
+.logo h1 {
+  padding-block-start: 2rem;
+  text-align: center;
 }
 
 .img {
   width: 60%;
+
+  border-right: 4px solid black;
+  object-fit: fill;
   height: 60%;
   height: 100%;
   object-fit: cover;
-  filter: hue-rotate(180deg);
 }
 
-.form_details{
-  outline: 3px solid green;
+.form_details {
   height: 70%;
 }
 
 .form_div {
-  border: 10px solid yellow;
+  outline: 4px solid black;
   display: flex;
   height: 90%;
+  width: 90%;
+  max-width: 1900px;
   margin: auto;
   align-self: center;
   background-color: white;
@@ -42,23 +51,88 @@
 
 .form {
   height: 100%;
-  border: 1px solid red;
   display: flex;
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
 
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-
+@keyframes aurora {
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
 
 .form div {
-  border: 1px solid blue;
   width: 90%;
-  margin:auto ;
+  margin: auto;
   display: flex;
   flex-flow: column wrap;
 }
 
+.form div input {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding-block: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.form div input:focus {
+  outline: none;
+  border-bottom: 3px solid black;
+}
+
+.form div button {
+  font-size: large;
+  transition: 0.5s ease-out;
+  width: 100%;
+  margin-inline-start: 5px;
+  color: white;
+  background-color: black;
+  padding-block: 0.5rem;
+}
+
+.form div button:hover {
+  background-color: #32a6ff;
+  transform: translate(0px, -2px);
+  color: white;
+}
+
+.form div label {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 1.1vw, 2rem);
+  color: black;
+}
+
+@media screen and (max-width: 420px) {
+
+  .form div input {
+    padding-block: 0.2em;
+  }
+
+  .error {
+    font-size: 13px;
+  }
+
+  .form div button {
+    width: 100%;
+    margin: auto;
+  }
+}

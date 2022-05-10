@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .App {
   display: grid;
   place-items: center;
   height: 100vh;
 }
 
-*{
-  font-family: 'Raleway', sans-serif;
+html{
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
 }
 

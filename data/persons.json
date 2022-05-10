@@ -80,6 +80,16 @@
       "confirmPassword": "abaki",
       "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
       "id": 8
+    },
+    {
+      "firstName": "Adeleye",
+      "lastName": "Temiloluwa",
+      "dateOfBirth": "2022-05-05",
+      "username": "alaafin",
+      "password": "alaafin",
+      "confirmPassword": "alaafin",
+      "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "id": 9
     }
   ]
 }

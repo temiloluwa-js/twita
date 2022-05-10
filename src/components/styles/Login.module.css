@@ -1,94 +1,164 @@
-.loginpage {
-  height: 80vh;
-  width: 90%;
-  border: 1px solid blue;
-  border-radius: 4%;
+.register_page {
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+
+
+.error {
+  color: red;
+}
+
+.logo{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_input{
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.submission{
+  height: 10%;
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+.logo h1 {
+  padding-block-start: 2rem;
+  text-align: center;
 }
 
 .img {
-  max-width: 70%;
+  width: 60%;
 
+  border-right: 4px solid black;
+  object-fit: fill;
+  height: 60%;
   height: 100%;
   object-fit: cover;
-  border: 1px solid transparent;
-  border-top-left-radius: 5%;
-  border-bottom-left-radius: 5%;
 }
 
 .form_div {
-  border: 1px solid red;
-  display: flex;  
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-}
-
-.form {
-  border: 3px solid blue;
-  padding: 2rem;
-  border: 5px solid white;
-  max-width: 100%;
-
+  border-radius: 10px;
+  outline: 4px solid black;
   display: flex;
-  flex-direction: column;
+  height: 90%;
+  width: 90%;
+  max-width: 1900px;
+  margin: auto;
+  align-self: center;
   background-color: white;
-}
-
-.form_div form  div {
-  display: flex;
-  flex-direction: column;
-}
-
-.form_div form div label {
-  font-size: clamp(1rem, 1.5vw, 1in);
-  margin-block-start: 3rem;
-}
-
-.form_div  form h1 {
-  text-align: center;
-  margin-block-end: 1rem;
-  font-size: clamp(2rem, 3vw, 2in);
-}
-
-.form_div form input,
-.form_div form input:active {
-  border-top: none;
-  font-size: clamp(1rem, 1.5vw, 1in);
-  border-bottom: 5px solid black;
-  border-left: none;
-  border-right: none;
-}
-
-.form_div input:focus {
-  outline: none;
-  border-bottom: 10px solid grey;
-}
-
-.button {
-  padding-block: 0.4rem;
-  margin-block-start: 3rem;
-  border-radius: none;
   border: 2px solid black;
-  background-color: white;
-  color: black;
-  font-size: clamp(1rem, 1.5vw, 1in);
   transition: all 0.4s;
 }
 
-.button:hover {
+.form {
+  height: 80%;
+  display: flex;
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.form div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form h1{
+  height: 30%;
+}
+
+.form div input {
+  width: 90%;
+  margin: auto;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding-block: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.form div input:focus{
+  outline: none;
+  border-bottom: 3px solid black;
+}
+
+.form div button {
+  font-size: large;
+  transition: 0.5s ease-out;
+  width: 100%;
+  margin-inline-start: 5px;
+  color: white;
   background-color: black;
+  padding-block: 0.5rem;
+}
+
+.form div button:hover {
+  background-color: #32a6ff;
+  transform: translate(0px, -2px);
   color: white;
 }
 
-.p{
-  align-self: center;
-  margin-block-start: 2rem;
+
+.form div label {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 1.1vw, 2rem);
+  color: black;
+  width: 50%;
+  margin: auto;
 }
 
-.error{
-  font-size: clamp(.5rem, 1.5vw, .5in);
-  color: red;
+
+@media screen and (max-width: 420px) {
+  .form div label {
+    font-size: 15px;
+  }
+
+  .form div input{
+    padding-block: .2em;
+  }
+
+  .error {
+    font-size: 13px;
+  }
+
+  .form div button {
+    width: 100%;
+    margin: auto;
+  }
 }

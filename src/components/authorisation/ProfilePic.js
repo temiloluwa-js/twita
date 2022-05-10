@@ -41,16 +41,17 @@ const ProfilePic = () => {
       .then(history("/"));
   };
   return (
-    <div className={styles.loginpage}>
+    <div className={styles.register_page}>
       <div className={styles.form_div}>
         <img src={image} alt="Wallpaper Doodle" className={styles.img} />
 
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className="logo">
-            <h1>Register</h1>
+            <h1>Choose a profile picture</h1>
           </div>
-          <div>
+          <div className={styles.form_details}>
             <img src={profilePic} alt="Profile Picture" className={styles.dp} />
+
             <label className={styles.label}>Profile Picture Style</label>
             <select
               name="imageType"

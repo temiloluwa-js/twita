@@ -1,127 +1,154 @@
-.loginpage {
+.register_page {
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color: gray;
-
+  background-color: #8dd8f8;
 }
 
-.error{
-  margin: auto;
+.error {
   color: red;
 }
 
+.logo img {
+  width: 70px;
+  height: 100px;
+  align-self: center;
+}
+
+.logo h1 {
+  padding-block-start: 2rem;
+  text-align: center;
+}
+
+.dp{
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
 .img {
   width: 60%;
+
+  border-right: 4px solid black;
+  object-fit: fill;
   height: 60%;
   height: 100%;
   object-fit: cover;
 }
 
+
+
+.form_details {
+  height: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .form_div {
-    border: 1px solid red;
-    display: flex;
-    height: 90%;
-    width: 90%;
-    margin: auto;
-    align-self: center;
-    background-color: white;
-    border: 2px solid black;
-    transition: all .4s;
-}
-
-.form {
-  border: 1px solid red;
-  width: 40%;
-  margin: auto;
-  padding: 2rem;
-  max-width: 500px;
+  border-radius: 10px;
+  outline: 4px solid black;
   display: flex;
-  align-self: center;
-  justify-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-
-.form div {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.form div label {
-  padding-block-start: .8em;
-  padding-block-end: .5em;
-  font-weight: bold;
-  width: 70%;
-  margin: auto;
-  font-size: clamp(20px, 1.5vw, 25px);
-}
-
-.form h1 {
-  text-align: center;
-  font-size: clamp(1rem, 3vw, 1.5in);
-}
-
-.form input{
   
-  width: 70%;
-  padding-block: .2em;
+  height: 90%;
+  width: 90%;
+  max-width: 1900px;
   margin: auto;
-  border: 1px solid black;
-  border-radius: 2%;
-  font-size: clamp(1rem, 1.5vw, 1.5in);
-}
-
-.form input:focus{
-  border: 3px solid #000;
-  outline: none;
-}
-
-
-.button {
-  width: 70%;
-  margin: auto;
-  padding-block: 0.4rem;
-  margin-block-start: 4rem;
-  border-radius: none;
-  border: 2px solid black;
+  align-self: center;
   background-color: white;
-  color: black;
-  font-size: clamp(1rem, 1.5vw, 1in);
+  border: 2px solid black;
   transition: all 0.4s;
 }
 
-.button:hover {
-  background-color: black;
-  color: white;
+.form {
+  font-size: 1.5rem;
+  outline: 3px solid red;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 
 
-@media screen and (max-width: 1400px){
-  .img{
-    width: 40%;
-    border-radius: 0%;
+.form div {
+  border: 1px solid red;
+  width: 90%;
+  margin: auto;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form div label{
+  padding-block-start: 1rem;
+}
+.form div select {
+  background-color: transparent;
+  width: 70%;
+  border-left: none;
+  font-size: 1.5rem;
+  border-right: none;
+  border-top: none;
+  padding-block: 0.4rem;
+  border-bottom: 3px solid black;
+}
+
+.form div input{
+  width: 70%;
+  border-left: none;
+  background-color: transparent;
+  border-right: none;
+  border-top: none;
+  padding-block: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.form div input:focus {
+  outline: none;
+  border-bottom: 3px solid black;
+}
+
+.form div button {
+  border: 4px solid white;
+  font-size: large;
+  border-radius: 10px;
+  transition: background-color 0.3s, border 0.3s;
+  width: 70%;
+  margin-inline-start: 5px;
+
+  background-color: #8dd8f8;
+  padding-block: 0.5rem;
+}
+
+.form div button:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid #8dd8f8;
+}
+
+.form div label {
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (max-width: 420px) {
+  .form div label {
+    font-size: 15px;
   }
 
-  .form_div{
-    width: 95%;
-    height: 80%;
-  }
-  .form{
-    width: 60%;
+  .form div input {
+    padding-block: 0.2em;
   }
 
-
-  .form input, .form div label, .button{
-    width: 95%;
+  .error {
+    font-size: 13px;
   }
 
-  .form div label{
-    padding-block-start: .7em;
-    padding-block-end: .4em;
+  .form div button {
+    width: 100%;
+    margin: auto;
   }
 }
