@@ -10,7 +10,6 @@ const Login = () => {
   const history = useNavigate();
   const [persons, setPersons] = useState([]);
   const [person, setPerson] = useState({});
-  const [errorList, setErrorList] = useState(0);
 
   useEffect(() => {
     axios

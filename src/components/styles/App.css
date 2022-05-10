@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 .App {
   display: grid;
   place-items: center;
@@ -7,6 +7,6 @@
 
 html{
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif
 }
 

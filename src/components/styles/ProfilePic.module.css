@@ -2,7 +2,32 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color: #8dd8f8;
+  background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.input{
+  outline: 1px solid black;
+  
 }
 
 .error {
@@ -38,14 +63,14 @@
 
 
 .form_details {
-  height: 70%;
+  height: 80%;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .form_div {
-  border-radius: 10px;
-  outline: 4px solid black;
+
+  outline: 6px solid black;
   display: flex;
   
   height: 90%;
@@ -54,13 +79,17 @@
   margin: auto;
   align-self: center;
   background-color: white;
-  border: 2px solid black;
+
   transition: all 0.4s;
+}
+
+.form_header{
+  font-size: clamp(1.4rem, 1.1vw, 2.0rem);
 }
 
 .form {
   font-size: 1.5rem;
-  outline: 3px solid red;
+
   height: 100%;
   display: flex;
   margin: auto;
@@ -68,13 +97,13 @@
   width: 100%;
 
   flex-direction: column;
-  justify-content: space-evenly;
+
 }
 
 
 
 .form div {
-  border: 1px solid red;
+
   width: 90%;
   margin: auto;
   margin: auto;
@@ -82,9 +111,7 @@
   flex-flow: column wrap;
 }
 
-.form div label{
-  padding-block-start: 1rem;
-}
+
 .form div select {
   background-color: transparent;
   width: 70%;
@@ -98,12 +125,15 @@
 
 .form div input{
   width: 70%;
-  border-left: none;
+  height: 5%;
   background-color: transparent;
-  border-right: none;
-  border-top: none;
+  border: none;
   padding-block: 0.4rem;
-  border-bottom: 1px solid black;
+
+}
+
+.submission{
+  align-items: center;
 }
 
 .form div input:focus {
@@ -112,24 +142,26 @@
 }
 
 .form div button {
-  border: 4px solid white;
-  font-size: large;
-  border-radius: 10px;
-  transition: background-color 0.3s, border 0.3s;
-  width: 70%;
-  margin-inline-start: 5px;
+  font-size: clamp(1rem, 1.1vw, 2rem);
+  transition: 0.5s ease-out;
+  width: 80%;
 
-  background-color: #8dd8f8;
+  color: white;
+  background-color: black;
   padding-block: 0.5rem;
 }
 
 .form div button:hover {
-  background-color: white;
-  color: black;
-  border: 3px solid #8dd8f8;
+  background-color: #32a6ff;
+  transform: translate(0px, -2px);
+  color: white;
 }
 
 .form div label {
+  font-size: clamp(1.5rem, 1.1vw, 2rem);
+  padding-block-end: 2rem;
+  padding-block-start: 1rem;
+  width: 70%;
   font-weight: bold;
   color: black;
 }

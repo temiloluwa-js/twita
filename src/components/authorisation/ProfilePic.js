@@ -46,7 +46,7 @@ const ProfilePic = () => {
         <img src={image} alt="Wallpaper Doodle" className={styles.img} />
 
         <form onSubmit={handleSubmit} className={styles.form}>
-          <div className="logo">
+          <div className={styles.form_header}>
             <h1>Choose a profile picture</h1>
           </div>
           <div className={styles.form_details}>
@@ -81,10 +81,11 @@ const ProfilePic = () => {
                 setBackgroundColor(e.target.value.replace("#", ""))
               }
             />
-
-            <button type="submit" className={styles.button}>
-              Choose Profile Picture
-            </button>
+            <div className={styles.submission}>
+              <button type="submit" className={styles.button}>
+                Choose Profile Picture
+              </button>
+            </div>
           </div>
         </form>
       </div>

@@ -90,6 +90,16 @@
       "confirmPassword": "alaafin",
       "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
       "id": 9
+    },
+    {
+      "firstName": "Adebakin",
+      "lastName": "Ridwanullah",
+      "dateOfBirth": "2022-05-05",
+      "username": "alfarido",
+      "password": "alfarido",
+      "confirmPassword": "alfarido",
+      "profilePicUrl": "https://avatars.dicebear.com/api/big-smile/john.svg?background=%23808040",
+      "id": 10
     }
   ]
 }
