@@ -1,5 +1,24 @@
 {
   "persons": [
-    
+    {
+      "firstName": "Kakashi",
+      "lastName": "Hatake",
+      "dateOfBirth": "2022-05-01",
+      "username": "hatake",
+      "password": "hatake",
+      "confirmPassword": "hatake",
+      "profilePicUrl": "https://avatars.dicebear.com/api/big-smile/john.svg?background=%2380ff80",
+      "id": 1
+    },
+    {
+      "firstName": "Uzumaki",
+      "lastName": "Naruto",
+      "dateOfBirth": "2022-05-01",
+      "username": "uzumaki",
+      "password": "uzumaki",
+      "confirmPassword": "uzumaki",
+      "profilePicUrl": "https://avatars.dicebear.com/api/adventurer/john.svg?background=%23ffff00",
+      "id": 2
+    }
   ]
 }

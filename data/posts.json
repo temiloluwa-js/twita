@@ -1,5 +1,37 @@
 {
   "posts": [
-
+    {
+      "postContent": "  Elon Musk once said, “You can have a Bachelor's Degree & still be an idiot”. Who Agrees?",
+      "comments": "",
+      "likes": "",
+      "datePosted": "10/05/2022, 23:17:13",
+      "creator": "hatake",
+      "creatorDp": "",
+      "creatorFirstName": "Kakashi",
+      "creatorLastName": "Hatake",
+      "id": 1
+    },
+    {
+      "postContent": "⚡️ Speedy CSS Tip! ⚡️\n\nCreate funky animated block reveals 🧱\n\nHave a play with ✨ Logical Properties ✨ and use scoped custom properties in your animations 🔥\n\nHope it's useful! 🤞 Thank you for the feedback 🙏\n\nWhat shall we do next? 🧐\n\nCodePen link below 👇",
+      "comments": "",
+      "likes": "",
+      "datePosted": "10/05/2022, 23:26:49",
+      "creator": "hatake",
+      "creatorDp": "",
+      "creatorFirstName": "Kakashi",
+      "creatorLastName": "Hatake",
+      "id": 2
+    },
+    {
+      "postContent": "I really hope this works!",
+      "comments": "",
+      "likes": "",
+      "datePosted": "10/05/2022, 23:32:43",
+      "creator": "uzumaki",
+      "creatorDp": "",
+      "creatorFirstName": "Uzumaki",
+      "creatorLastName": "Naruto",
+      "id": 3
+    }
   ]
 }

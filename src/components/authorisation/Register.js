@@ -19,7 +19,6 @@ const Register = () => {
     const errors = {};
 
     if (values.username) {
-      console.log("Breh");
       for (let i of profiles) {
         if (i["username"] == values.username) {
           errors.username = "username not available";
@@ -91,7 +90,6 @@ const Register = () => {
         <form onSubmit={formik.handleSubmit} className={styles.form}>
         <div className={styles.logo}>
           <img src={logo} alt="Logo" />
-          <h1>REGISTER</h1>
         </div>
           <div className={styles.form_details}>
             <div>

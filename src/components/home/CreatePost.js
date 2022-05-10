@@ -11,6 +11,7 @@ const CreatePost = () => {
 
   const handleLogOut = () => {
     localStorage.removeItem("personInStorage");
+    localStorage.removeItem("dpurl");
     history("/login");
   };
 

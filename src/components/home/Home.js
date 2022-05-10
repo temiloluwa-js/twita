@@ -12,6 +12,7 @@ const Home = () => {
   const history = useNavigate();
   const handleLogOut = () => {
     localStorage.removeItem("personInStorage");
+    localStorage.removeItem("dpurl");
     history("/login");
   };
   return (

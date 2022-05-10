@@ -4,6 +4,7 @@ import styles from "../styles/Posts.module.css";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
+  const dpurl = localStorage.getItem("dpurl")
 
 
   useEffect(() => {
@@ -18,10 +19,10 @@ const PostList = () => {
     <div className={styles.posts}>
       {posts &&
         posts.map((post) => (
-          <article className={styles.post}>
+          <article className={styles.post} key={post.id}>
             <div className={styles.post_header}>
               <div className={styles.dp}>
-                <img src={post.creatorDp}/>
+               {dpurl ? <img src={posts.creatorDp}></img> : <img src={dpurl}/>} 
               </div>
               <div className="person_details">
                 <h1>
