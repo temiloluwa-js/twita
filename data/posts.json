@@ -1,36 +1,5 @@
 {
   "posts": [
-    {
-      "postContent": "ayo",
-      "comments": "",
-      "likes": "",
-      "datePosted": 10,
-      "creator": "maki",
-      "creatorFirstName": "Maki",
-      "creatorLastName": "Zenin",
-      "id": 1
-    },
-    {
-      "postContent": "siuuuu muthafuckas. 😎",
-      "comments": "",
-      "likes": "",
-      "datePosted": 10,
-      "creator": "maki",
-      "creatorDp": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%2380ff00",
-      "creatorFirstName": "Maki",
-      "creatorLastName": "Zenin",
-      "id": 2
-    },
-    {
-      "postContent": "",
-      "comments": "",
-      "likes": "",
-      "datePosted": 10,
-      "creator": "maki",
-      "creatorDp": "https://avatars.dicebear.com/api/miniavs/john.svg?background=%2380ff00",
-      "creatorFirstName": "Maki",
-      "creatorLastName": "Zenin",
-      "id": 3
-    }
+
   ]
 }

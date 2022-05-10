@@ -8,6 +8,12 @@ import search_icon from "./logout.svg";
 
 const CreatePost = () => {
   const history = useNavigate();
+
+  const handleLogOut = () => {
+    localStorage.removeItem("personInStorage");
+    history("/login");
+  };
+
   const validate = (values) => {
     const errors = {};
 
@@ -23,7 +29,7 @@ const CreatePost = () => {
       postContent: "",
       comments: "",
       likes: "",
-      datePosted: date.getDate(),
+      datePosted: date.toLocaleString(),
       creator: personInStorage.username,
       creatorDp: personInStorage.profilePicUrl,
       creatorFirstName: personInStorage.firstName,
@@ -48,7 +54,7 @@ const CreatePost = () => {
       <div className={styles.header}>
         <div className={styles.top_banner}>
           <Link to='/home' className={styles.link}><h1>twita.</h1></Link>
-          <img src={search_icon} alt="search" className={styles.search_icon} />
+          <img src={search_icon} alt="search" className={styles.search_icon} onClick={handleLogOut} />
         </div>
         <form onSubmit={formik.handleSubmit} className={styles.form}>
           <textarea
