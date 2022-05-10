@@ -46,6 +46,9 @@ const ProfilePic = () => {
         <img src={image} alt="Wallpaper Doodle" className={styles.img} />
 
         <form onSubmit={handleSubmit} className={styles.form}>
+          <div className="logo">
+            <h1>Register</h1>
+          </div>
           <div>
             <img src={profilePic} alt="Profile Picture" className={styles.dp} />
             <label className={styles.label}>Profile Picture Style</label>

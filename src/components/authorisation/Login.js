@@ -20,7 +20,6 @@ const Login = () => {
 
   const validate = (values) => {
     const errors = {};
-    
 
     if (!values.username) {
       errors.username = "please enter a valid username";
@@ -28,25 +27,25 @@ const Login = () => {
       errors.password = "please enter a valid password";
     }
 
-    // if (values.username) {
-    //   for (let i of persons) {
-    //     if(i.username != values.username) {
-    //       void(0)
-    //     }
-    //     console.log('found')
-    //   }
-    // }
+    if (values.username) {
+      console.log(persons);
+      let personFound = persons.some(
+        (person) => person.username == values.username
+      );
+      console.log(personFound);
+      if (!personFound) {
+        errors.username = "username not found";
+      }
+    }
 
-    // if (values.password) {
-    //   for (let i of persons) {
-    //     if (i.password != values.password) {
-    //       setErrorList(prevError => prevError + 1)
-    //     }
-    //   }
-    //   if (errorList == persons.length){
-    //     errors.password = 'please enter a valid password'
-    //   }
-    // }
+    if (values.password) {
+      let personFound = persons.some(
+        (person) => person.password == values.password
+      );
+      if (!personFound) {
+        errors.password = "incorrect password";
+      }
+    }
 
     return errors;
   };
@@ -56,16 +55,14 @@ const Login = () => {
       username: "",
       password: "",
     },
+    validateOnChange: false,
+    validateOnBlur: false,
     onSubmit: (values) => {
-      if (formik.errors.length > 0) {
-        void(0);
-      } else {
-        for (let i of persons) {
-          if (i.username == values.username && i.password == values.password) {
-            setPerson(i);
-            localStorage.setItem("personInStorage", JSON.stringify(i));
-            history("/");
-          }
+      for (let i of persons) {
+        if (i.username == values.username && i.password == values.password) {
+          setPerson(i);
+          localStorage.setItem("personInStorage", JSON.stringify(i));
+          history("/");
         }
       }
     },

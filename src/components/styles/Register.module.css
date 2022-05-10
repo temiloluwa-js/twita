@@ -3,10 +3,9 @@
   width: 100%;
   display: flex;
   background-color: gray;
-
 }
 
-.error{
+.error {
   margin: auto;
   color: red;
 }
@@ -16,111 +15,44 @@
   height: 60%;
   height: 100%;
   object-fit: cover;
+  filter: hue-rotate(180deg);
+}
+
+.form_details{
+  outline: 3px solid green;
+  height: 70%;
 }
 
 .form_div {
-    border: 10px solid yellow;
-    display: flex;
-    height: 90%;
-    width: 90%;
-    margin: auto;
-    align-self: center;
-    background-color: white;
-    border: 2px solid black;
-    transition: all .4s;
-}
-
-.form {
-border: 1px solid blue;
-  width: 100%;
-  margin: auto;
-  max-width: 500px;
+  border: 10px solid yellow;
   display: flex;
+  height: 90%;
+  justify-content: space-between;
+  margin: auto;
   align-self: center;
-  justify-items: center;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: column;
   background-color: white;
-}
-
-.form div {
-  border: 1px solid red;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.form div label {
-  padding-block-start: .8em;
-  padding-block-end: .5em;
-  font-weight: bold;
-  width: 70%;
-  margin: auto;
-  font-size: clamp(20px, 1.5vw, 25px);
-}
-
-.form h1 {
-  text-align: center;
-  font-size: clamp(1rem, 3vw, 1.5in);
-}
-
-
-.form input{
-  
-  width: 70%;
-  padding-block: .2em;
-  margin: auto;
-  border: 1px solid black;
-  border-radius: 2%;
-  font-size: clamp(1rem, 1.5vw, 1.5in);
-}
-
-.form input:focus{
-  border: 3px solid #000;
-  outline: none;
-}
-
-
-.button {
-  width: 70%;
-  margin: auto;
-  padding-block: 0.4rem;
-  margin-block-start: 4rem;
-  border-radius: none;
   border: 2px solid black;
-  background-color: white;
-  color: black;
-  font-size: clamp(1rem, 1.5vw, 1in);
   transition: all 0.4s;
 }
 
-.button:hover {
-  background-color: black;
-  color: white;
+.form {
+  height: 100%;
+  border: 1px solid red;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 
 
-@media screen and (max-width: 1400px){
-  .img{
-    width: 40%;
-    border-radius: 0%;
-  }
-
-  .form_div{
-    width: 95%;
-    height: 80%;
-  }
-  .form{
-    width: 60%;
-  }
-
-
-  .form input, .form div label, .button{
-    width: 95%;
-  }
-
-
+.form div {
+  border: 1px solid blue;
+  width: 90%;
+  margin:auto ;
+  display: flex;
+  flex-flow: column wrap;
 }
+
