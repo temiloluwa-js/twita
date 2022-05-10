@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProfilePic from "./components/authorisation/ProfilePic";
 import Home from "./components/home/Home";
 import Login from "./components/authorisation/Login";
+import CreatePost from "./components/home/CreatePost";
 function App() {
   const person = JSON.parse(localStorage.getItem("personInStorage"));
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/register" element={<Register />} />
+          <Route exact path="/create_post" element={<CreatePost />} />
           {person ? (
             <Route exact path="/home" element={<Home />} />
           ) : (

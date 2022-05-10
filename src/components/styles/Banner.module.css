@@ -1,4 +1,4 @@
-header{
+.header{
     font-size: clamp(.8rem, 1.1vw, 1rem);
     margin: auto;
     align-self: center;
@@ -8,8 +8,15 @@ header{
     flex-direction: column;
 }
 
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
+    background-size: 200%;
+    animation: aurora 10s infinite;
+}
+
 .top_banner{
-    
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,7 +26,23 @@ header{
     border-bottom: 1px solid gray;
 }
 
+.link{
+    font-size: clamp(.8rem, 1.1vw, 1rem);
+    color: black;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.link:hover{
+    color: #5362F5;
+}
+
 .bottom_banner{
+    
+    background: rgba(254, 255, 253, 0.68);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
     padding-block-start: 1rem;
     padding-block-end: 1rem;
     display: flex;
@@ -27,8 +50,9 @@ header{
     width: 90%;
     margin: auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-bottom: 1px solid gray;
+    margin-block-end: clamp(.5rem, 1.1vw, 1rem);
 
 }
 
@@ -47,3 +71,4 @@ header{
     width: 20px;
     height: 20px;
 }
+

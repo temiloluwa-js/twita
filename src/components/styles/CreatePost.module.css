@@ -1,0 +1,90 @@
+.header{
+    font-size: clamp(.8rem, 1.1vw, 1rem);
+    margin: auto;
+    align-self: center;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
+    background-size: 200%;
+    animation: aurora 10s infinite;
+}
+.link{
+    color: black;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.link:hover{
+    color: whitesmoke;
+}
+.top_banner{
+
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+
+.search_icon{
+
+    width: 20px;
+    height: 20px;
+}
+
+.form{
+    width: 90%;
+    margin: auto;
+}
+
+.form textarea{
+    font-size: clamp(2rem, 1.3vw, 2.7rem);
+    background: rgba(254, 255, 253, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    margin-block-start: clamp(4rem, 2vw, 8rem);
+    margin-block-end: clamp(4rem, 2vw, 8rem);
+    height: 50rem;
+    width: 100%;
+}
+
+
+
+.form textarea:focus{
+    background: rgba(254, 255, 253, 0.68);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+}
+
+.form div button {
+    font-size: large;
+    transition: background-color 0.5s ease-out;
+    background-color: #8d54ff;
+    width: 100%;
+    margin-inline-start: 5px;
+    color: white;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    padding-block: 0.5rem;
+  }
+  
+  .form div button:hover {
+    background-color: #32a6ff;
+    transform: translate(0px, -2px);
+    color: white;
+  }
