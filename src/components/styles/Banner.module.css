@@ -1,0 +1,49 @@
+header{
+    font-size: clamp(.8rem, 1.1vw, 1rem);
+    margin: auto;
+    align-self: center;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_banner{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.bottom_banner{
+    padding-block-start: 1rem;
+    padding-block-end: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+
+}
+
+.dp img{
+    width: 80px;
+    height: 80px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.search_icon{
+
+    width: 20px;
+    height: 20px;
+}

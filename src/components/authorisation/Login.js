@@ -79,7 +79,7 @@ const Login = () => {
               <img src={logo} alt="Login" />
             </div>
             <div className={styles.form_input}>
-            <label htmlFor="username">Username</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 name="username"
@@ -90,7 +90,7 @@ const Login = () => {
               {formik.touched.username && formik.errors.username && (
                 <div className={styles.error}>{formik.errors.username}</div>
               )}
-                          <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 name="password"
