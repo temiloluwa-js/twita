@@ -22,7 +22,7 @@ const PostList = () => {
           <article className={styles.post} key={post.id}>
             <div className={styles.post_header}>
               <div className={styles.dp}>
-               {dpurl ? <img src={posts.creatorDp}></img> : <img src={dpurl}/>} 
+               <img src={posts.creatorDp}/>
               </div>
               <div className="person_details">
                 <h1>

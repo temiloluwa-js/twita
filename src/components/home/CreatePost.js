@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import styles from "../styles/CreatePost.module.css";
@@ -22,8 +22,21 @@ const CreatePost = () => {
       errors.postContent = "You have not entered anything to be posted";
     }
   };
-
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
+
+  const [profilePic, setProfilePic] = useState('') 
+
+  useEffect(() => {
+    axios.get(`http://localhost:7000/persons?username=${personInStorage.username}`)
+    .then(response => setProfilePic(response.data[0]["profilePicUrl"]))
+    .catch(err => console.log(err))
+  }, [validate])
+
+  useEffect(() => {
+    console.log(profilePic)
+  }, [validate])
+
+
   const date = new Date();
   const formik = useFormik({
     initialValues: {
@@ -32,7 +45,7 @@ const CreatePost = () => {
       likes: "",
       datePosted: date.toLocaleString(),
       creator: personInStorage.username,
-      creatorDp: personInStorage.profilePicUrl,
+      creatorDp: profilePic && profilePic,
       creatorFirstName: personInStorage.firstName,
       creatorLastName: personInStorage.lastName,
     },

@@ -32,6 +32,28 @@
       "creatorFirstName": "Uzumaki",
       "creatorLastName": "Naruto",
       "id": 3
+    },
+    {
+      "postContent": "i hope this works.",
+      "comments": "",
+      "likes": "",
+      "datePosted": "10/05/2022, 23:50:45",
+      "creator": "uzumaki",
+      "creatorDp": "",
+      "creatorFirstName": "Uzumaki",
+      "creatorLastName": "Naruto",
+      "id": 4
+    },
+    {
+      "postContent": "adads",
+      "comments": "",
+      "likes": "",
+      "datePosted": "10/05/2022, 23:55:57",
+      "creator": "uzumaki",
+      "creatorDp": "",
+      "creatorFirstName": "Uzumaki",
+      "creatorLastName": "Naruto",
+      "id": 5
     }
   ]
 }
