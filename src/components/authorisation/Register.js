@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import styles from "../styles/Register.module.css";
 import image from "./2549395.jpg";
-import logo from './onboarding.png'
+import logo from "./onboarding.png";
 
 const Register = () => {
   const [profiles, setProfiles] = useState([]);
@@ -84,13 +84,12 @@ const Register = () => {
   return (
     <div className={styles.register_page}>
       <div className={styles.form_div}>
-        
         <img src={image} className={styles.img} />
 
         <form onSubmit={formik.handleSubmit} className={styles.form}>
-        <div className={styles.logo}>
-          <img src={logo} alt="Logo" />
-        </div>
+          <div className={styles.logo}>
+            <img src={logo} alt="Logo" />
+          </div>
           <div className={styles.form_details}>
             <div>
               <label htmlFor="firstName">First Name</label>
@@ -179,7 +178,7 @@ const Register = () => {
               />
             </div>
 
-            <div>
+            <div className={styles.submission}>
               {pending ? (
                 <button className={styles.button}>Creating account...</button>
               ) : (

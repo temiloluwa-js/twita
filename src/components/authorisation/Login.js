@@ -74,42 +74,40 @@ const Login = () => {
       <div className={styles.form_div}>
         <img src={image} className={styles.img} />
         <form onSubmit={formik.handleSubmit} className={styles.form}>
-          <div className={styles.form}>
-            <div className={styles.logo}>
-              <img src={logo} alt="Login" />
-            </div>
-            <div className={styles.form_input}>
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                name="username"
-                onChange={formik.handleChange}
-                value={formik.values.username}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.username && formik.errors.username && (
-                <div className={styles.error}>{formik.errors.username}</div>
-              )}
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                onChange={formik.handleChange}
-                value={formik.values.password}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.password && formik.errors.password && (
-                <div className={styles.error}>{formik.errors.password}</div>
-              )}
-            </div>
-            <div className={styles.submission}>
-              <button type="submit" className={styles.button}>
-                Log In
-              </button>
-              <p className={styles.p}>
-                Do not have an account? <Link to="/register">Register</Link>
-              </p>
-            </div>
+          <div className={styles.logo}>
+            <img src={logo} alt="Login" />
+          </div>
+          <div className={styles.form_input}>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.username && formik.errors.username && (
+              <div className={styles.error}>{formik.errors.username}</div>
+            )}
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.password && formik.errors.password && (
+              <div className={styles.error}>{formik.errors.password}</div>
+            )}
+          </div>
+          <div className={styles.submission}>
+            <button type="submit" className={styles.button}>
+              Log In
+            </button>
+            <p className={styles.p}>
+              Do not have an account? <Link to="/register">Register</Link>
+            </p>
           </div>
         </form>
       </div>
