@@ -59,6 +59,26 @@
       "confirmPassword": "sia",
       "profilePicUrl": "https://avatars.dicebear.com/api/micah/john.svg?background=%23000000",
       "id": 6
+    },
+    {
+      "firstName": "labrinth",
+      "lastName": "labrinth",
+      "dateOfBirth": "2022-05-07",
+      "username": "labrinth",
+      "password": "labrinth",
+      "confirmPassword": "labrinth",
+      "profilePicUrl": "https://avatars.dicebear.com/api/adventurer-neutral/john.svg?background=%23ffffff",
+      "id": 7
+    },
+    {
+      "firstName": "okunrin",
+      "lastName": "okunrin",
+      "dateOfBirth": "2022-05-12",
+      "username": "okunrin",
+      "password": "okunrin",
+      "confirmPassword": "okunrin",
+      "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
+      "id": 8
     }
   ]
 }

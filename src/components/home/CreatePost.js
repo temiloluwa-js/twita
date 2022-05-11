@@ -24,17 +24,8 @@ const CreatePost = () => {
   };
   const personInStorage = JSON.parse(localStorage.getItem("personInStorage"));
 
-  const [profilePic, setProfilePic] = useState('') 
 
-  useEffect(() => {
-    axios.get(`http://localhost:7000/persons?username=${personInStorage.username}`)
-    .then(response => setProfilePic(response.data[0]["profilePicUrl"]))
-    .catch(err => console.log(err))
-  }, [validate])
 
-  useEffect(() => {
-    console.log(profilePic)
-  }, [validate])
 
 
   const date = new Date();
@@ -45,7 +36,7 @@ const CreatePost = () => {
       likes: "",
       datePosted: date.toLocaleString(),
       creator: personInStorage.username,
-      creatorDp: profilePic && profilePic,
+      creatorDp: personInStorage.profilePicUrl,
       creatorFirstName: personInStorage.firstName,
       creatorLastName: personInStorage.lastName,
     },
@@ -57,6 +48,7 @@ const CreatePost = () => {
       } else {
         axios
           .post("http://localhost:3010/posts", values)
+          .then(console.log(values))
           .then(history("/"))
           .catch((err) => console.log(err));
       }

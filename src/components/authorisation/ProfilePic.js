@@ -25,15 +25,15 @@ const ProfilePic = () => {
       .get(
         `http://localhost:7000/persons?username=${personInStorage.username}&firstName=${personInStorage.firstName}`
       )
-      .then((response) => setFinalPerson(response.data))
+      .then((response) => setFinalPerson(response.data[0]))
       .catch((err) => console.log(err));
-  }, [finalPerson]);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = finalPerson[0];
+    const data = finalPerson;
     axios
-      .put(`http://localhost:7000/persons/${finalPerson[0].id}`, {
+      .put(`http://localhost:7000/persons/${finalPerson.id}`, {
         ...data,
         profilePicUrl: profilePic,
       })
