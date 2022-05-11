@@ -20,7 +20,7 @@ const PostList = () => {
           <article className={styles.post} key={post.id}>
             <div className={styles.post_header}>
               <div className={styles.dp}>
-               <img src={posts.creatorDp} className={styles.dp}/>
+               <img src={posts.creatorDp && posts.creatorDp} className={styles.dp}/>
               </div>
               <div className="person_details">
                 <h1>

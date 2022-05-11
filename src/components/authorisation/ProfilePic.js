@@ -16,14 +16,14 @@ const ProfilePic = () => {
 
   useEffect(() => {
     setProfilePic(
-      `https://avatars.dicebear.com/api/${imageType}/john.svg?background=%23${backgroundColor}`
+      `https://avatars.dicebear.com/api/${imageType}/${personInStorage.firstName}.svg?background=%23${backgroundColor}`
     );
   }, [imageType, backgroundColor]);
 
   useEffect(() => {
     axios
       .get(
-        `http://localhost:7000/persons?username=${personInStorage.username}&firstName=${personInStorage.firstName}`
+        `http://localhost:7000/persons?username=${personInStorage.username}`
       )
       .then((response) => setFinalPerson(response.data[0]))
       .catch((err) => console.log(err));

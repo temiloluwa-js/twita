@@ -49,7 +49,6 @@ const CreatePost = () => {
         axios
           .post("http://localhost:3010/posts", values)
           .then(console.log(values))
-          .then(history("/"))
           .catch((err) => console.log(err));
       }
     },

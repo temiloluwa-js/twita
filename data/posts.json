@@ -1,136 +1,15 @@
 {
   "posts": [
     {
-      "postContent": "  Elon Musk once said, “You can have a Bachelor's Degree & still be an idiot”. Who Agrees?",
+      "postContent": "Re-test. 🌹",
       "comments": "",
       "likes": "",
-      "datePosted": "10/05/2022, 23:17:13",
-      "creator": "hatake",
-      "creatorDp": "",
-      "creatorFirstName": "Kakashi",
-      "creatorLastName": "Hatake",
+      "datePosted": "11/05/2022, 22:15:29",
+      "creator": "temi",
+      "creatorDp": "https://avatars.dicebear.com/api/bottts/john.svg?background=%23ff8000",
+      "creatorFirstName": "Adeleye",
+      "creatorLastName": "Temiloluwa",
       "id": 1
-    },
-    {
-      "postContent": "⚡️ Speedy CSS Tip! ⚡️\n\nCreate funky animated block reveals 🧱\n\nHave a play with ✨ Logical Properties ✨ and use scoped custom properties in your animations 🔥\n\nHope it's useful! 🤞 Thank you for the feedback 🙏\n\nWhat shall we do next? 🧐\n\nCodePen link below 👇",
-      "comments": "",
-      "likes": "",
-      "datePosted": "10/05/2022, 23:26:49",
-      "creator": "hatake",
-      "creatorDp": "",
-      "creatorFirstName": "Kakashi",
-      "creatorLastName": "Hatake",
-      "id": 2
-    },
-    {
-      "postContent": "I really hope this works!",
-      "comments": "",
-      "likes": "",
-      "datePosted": "10/05/2022, 23:32:43",
-      "creator": "uzumaki",
-      "creatorDp": "",
-      "creatorFirstName": "Uzumaki",
-      "creatorLastName": "Naruto",
-      "id": 3
-    },
-    {
-      "postContent": "i hope this works.",
-      "comments": "",
-      "likes": "",
-      "datePosted": "10/05/2022, 23:50:45",
-      "creator": "uzumaki",
-      "creatorDp": "",
-      "creatorFirstName": "Uzumaki",
-      "creatorLastName": "Naruto",
-      "id": 4
-    },
-    {
-      "postContent": "adads",
-      "comments": "",
-      "likes": "",
-      "datePosted": "10/05/2022, 23:55:57",
-      "creator": "uzumaki",
-      "creatorDp": "",
-      "creatorFirstName": "Uzumaki",
-      "creatorLastName": "Naruto",
-      "id": 5
-    },
-    {
-      "postContent": "I'm hungry.",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 00:05:33",
-      "creator": "uzui",
-      "creatorDp": "",
-      "creatorFirstName": "Uzui",
-      "creatorLastName": "Tengen",
-      "id": 6
-    },
-    {
-      "postContent": "Hoping to fix the profile picture error soon. 😎",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 00:08:29",
-      "creator": "tanjiro",
-      "creatorDp": "",
-      "creatorFirstName": "Tanjiro",
-      "creatorLastName": "Kamado",
-      "id": 7
-    },
-    {
-      "postContent": "😶🧊🔗",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 00:09:12",
-      "creator": "uzui",
-      "creatorDp": "",
-      "creatorFirstName": "Uzui",
-      "creatorLastName": "Tengen",
-      "id": 8
-    },
-    {
-      "postContent": "Ayo",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 20:02:05",
-      "creator": "uzui",
-      "creatorDp": {},
-      "creatorFirstName": "Uzui",
-      "creatorLastName": "Tengen",
-      "id": 9
-    },
-    {
-      "postContent": "Uncle",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 21:29:41",
-      "creator": "labrinth",
-      "creatorDp": "https://avatars.dicebear.com/api/adventurer-neutral/john.svg?background=%23ffffff",
-      "creatorFirstName": "labrinth",
-      "creatorLastName": "labrinth",
-      "id": 10
-    },
-    {
-      "postContent": "a",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 21:30:10",
-      "creator": "labrinth",
-      "creatorDp": "https://avatars.dicebear.com/api/adventurer-neutral/john.svg?background=%23ffffff",
-      "creatorFirstName": "labrinth",
-      "creatorLastName": "labrinth",
-      "id": 11
-    },
-    {
-      "postContent": "Worrrrrrrrrrrrrrk for fuck's sake.",
-      "comments": "",
-      "likes": "",
-      "datePosted": "11/05/2022, 21:42:56",
-      "creator": "okunrin",
-      "creatorDp": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
-      "creatorFirstName": "okunrin",
-      "creatorLastName": "okunrin",
-      "id": 12
     }
   ]
 }
