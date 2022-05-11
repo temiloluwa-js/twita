@@ -49,6 +49,16 @@
       "confirmPassword": "blabla",
       "profilePicUrl": "https://avatars.dicebear.com/api/male/john.svg?background=%23000000",
       "id": 5
+    },
+    {
+      "firstName": "Sia",
+      "lastName": "Labrinth",
+      "dateOfBirth": "2022-05-09",
+      "username": "sia",
+      "password": "sia",
+      "confirmPassword": "sia",
+      "profilePicUrl": "https://avatars.dicebear.com/api/micah/john.svg?background=%23000000",
+      "id": 6
     }
   ]
 }

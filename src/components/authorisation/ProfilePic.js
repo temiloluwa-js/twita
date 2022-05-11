@@ -37,7 +37,8 @@ const ProfilePic = () => {
         ...data,
         profilePicUrl: profilePic,
       })
-      .then(localStorage.setItem("dpurl", profilePic))
+      .then(localStorage.setItem("personInStorage", JSON.stringify({...personInStorage, profilePicUrl: profilePic})))
+      .then(console.log(localStorage.getItem("personInStorage")))
       .then(history("/home"));
   };
   return (
